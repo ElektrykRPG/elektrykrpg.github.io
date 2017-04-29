@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <title>ElektrykRPG</title>
+<style>
+    .fontPreload {
+        font-family: 'Press Start 2P', cursive;
+        position: absolute;
+        left: -100px;
+    }  
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    </style>
+     <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script> 
+    <script src="Repeating.js"></script>
+    <script src="Boot.js"></script>
+    <script src="Preloader.js"></script>
+    <script src="MainMenu.js"></script>
+    <script src="Level1.js"></script>
+    <script src="FFR.js"></script>
+    <script src="FFL.js"></script>
+    <script src="SF.js"></script>
+    <script src="GF.js"></script>
+    <script src="outsideElektryk.js"></script>
+    <script src="city1.js"></script>
+    <script src="city2.js"></script>
+    <script src="hayati.js"></script>
+     <script src="bodrum.js"></script>
+</head>
+
+<body style="background:#d9d8d8"><div class="fontPreload">.</div>
+    <script>
+    
+        var game = new Phaser.Game(1280, 800, Phaser.AUTO, "");
+
+        game.state.add('Boot', Boot);
+        game.state.add('Preloader', Preloader);
+        game.state.add('MainMenu', MainMenu);
+        game.state.add('Level1', Level1);
+        game.state.add('FFR', FFR);
+        game.state.add('FFL', FFL);
+        game.state.add('SF', SF);
+        game.state.add('GF', GF);
+        game.state.add('outsideElektryk', outsideElektryk);
+        game.state.add('city1', city1);
+        game.state.add('city2', city2);
+        game.state.add('hayati', hayati);
+        game.state.add('bodrum', bodrum);
+
+        game.state.start('Boot');
+      
+    </script>
+</body>
+
+</html>
